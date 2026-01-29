@@ -1,63 +1,124 @@
-# InstaBlocker
+# 🚫 InstaBlocker
 
-A browser extension that blocks Instagram with an interactive challenge to unlock access.
+> **Stay focused. Block distractions. Master your time.**
 
-## Description
+A powerful browser extension that blocks Instagram and challenges you to prove you deserve access.
 
-InstaBlocker is a Chrome/Firefox extension designed to help users avoid distractions by blocking access to Instagram. When you try to visit Instagram, the extension displays a full-page overlay with a challenge that users must solve to gain access.
+---
 
-## Features
+## ✨ Overview
 
-- 🚫 Blocks Instagram website access completely
-- 🎯 Interactive challenge to unlock access
-- 🔐 Answer the riddle "olleh" to unblock
-- 🎨 Clean, centered UI with white input field
-- ✅ Error handling with alerts for wrong answers
+InstaBlocker is a smart Chrome/Firefox extension built for anyone serious about beating social media addiction. It doesn't just block Instagram—it makes you solve an interactive challenge first. Think of it as a digital bouncer for your productivity.
 
-## Installation
+---
 
-1. Clone this repository or download the files
-2. Open your browser's extension management page:
-   - **Chrome**: `chrome://extensions/`
-   - **Firefox**: `about:addons`
-3. Enable "Developer mode" (Chrome only)
-4. Click "Load unpacked" and select the folder containing these files
-5. The extension is now active!
+## 🎯 Features
 
-## Files
+| Feature | Description |
+|---------|-------------|
+| 🚫 **Complete Block** | Fully blocks Instagram with a full-page overlay |
+| 🧩 **Challenge System** | Interactive riddle prevents mindless access |
+| 🔓 **Smart Unlock** | Answer "olleh" to temporarily unlock access |
+| 🎨 **Clean UI** | Minimalist, distraction-free interface |
+| ⚡ **Instant Response** | Real-time feedback on wrong answers |
 
-- `manifest.json` - Extension configuration and permissions
-- `contents.js` - Script that blocks Instagram and displays the message
+---
 
-## How It Works
+## 📥 Installation
 
-When you visit Instagram, the `contents.js` script:
-1. Creates a full-page black overlay with fixed positioning
-2. Displays "Access Blocked" heading
-3. Shows a textarea input field with white background and black text
-4. Provides a button to submit the answer
-5. User must enter "olleh" (hello backwards) to remove the overlay
-6. Shows an alert if the wrong answer is entered
-7. Removes the overlay and allows access when correct answer is submitted
+### Quick Setup
 
-## Requirements
+1. **Get the files**
+   ```bash
+   git clone <repository-url>
+   # or download and extract the zip file
+   ```
 
-- Chrome 88+ or Firefox 68+
-- Browser extension installation permissions
+2. **Open your browser's extension manager**
+   - **Chrome**: Navigate to `chrome://extensions/`
+   - **Firefox**: Navigate to `about:addons`
 
-## Future Enhancements
+3. **Enable Developer Mode**
+   - Chrome: Toggle "Developer mode" (top-right corner)
+   - Firefox: No action needed
 
-- Randomized challenge questions
-- Multiple difficulty levels
-- Time limit for solving the challenge
-- Customizable unlock answers
-- Statistics tracking
-- Whitelist/blacklist functionality
+4. **Load the extension**
+   - Click "Load unpacked" (Chrome) or "Load Temporary Add-on" (Firefox)
+   - Select the `instablocker.ex` folder
 
-## License
+5. **You're ready!** 🎉 The extension is now active
 
-MIT License
+---
 
-## Author
+## 📁 Project Structure
 
-Brain Nourishment
+```
+instablocker.ex/
+├── manifest.json      # Extension metadata & permissions
+├── contents.js        # Core blocking & challenge logic
+└── README.md          # Documentation
+```
+
+---
+
+## ⚙️ How It Works
+
+When you visit Instagram, InstaBlocker springs into action:
+
+```
+1. 🛡️  Full-page black overlay appears
+2. 🖼️  "Access Blocked" message displays
+3. 📝  Interactive input field appears
+4. 🤔  You must solve the riddle: "olleh"
+5. ✓   Enter correct answer → Access granted
+6. ✗   Wrong answer → Alert notification
+```
+
+**The Riddle:** "olleh" is "hello" spelled backwards—a simple test of focus and intent.
+
+---
+
+## 💻 System Requirements
+
+| Requirement | Details |
+|------------|---------|
+| **Chrome** | Version 88 or later |
+| **Firefox** | Version 68 or later |
+| **Permissions** | Extension installation rights |
+
+---
+
+## 🚀 Future Roadmap
+
+- [ ] Randomized challenge questions
+- [ ] Multiple difficulty levels
+- [ ] Time-based challenges
+- [ ] Custom unlock phrases
+- [ ] Usage statistics dashboard
+- [ ] Website whitelist/blacklist
+- [ ] Customizable block messages
+
+---
+
+## 📄 License
+
+MIT License - Feel free to use, modify, and distribute
+
+---
+
+## 👤 Author
+
+**Brain Nourishment**
+
+---
+
+## 💡 Tips for Best Results
+
+- **Set a goal**: Use InstaBlocker during focus sessions
+- **Stay consistent**: Solve the challenge mindfully each time
+- **Track progress**: Notice how your productivity improves
+- **Customize**: Modify the challenge to fit your needs
+
+---
+
+*Made with ❤️ for productivity enthusiasts everywhere*
