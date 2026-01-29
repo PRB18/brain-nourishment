@@ -1,16 +1,18 @@
 # InstaBlocker
 
-A browser extension that blocks Instagram and replaces the page with a motivational message.
+A browser extension that blocks Instagram with an interactive challenge to unlock access.
 
 ## Description
 
-InstaBlocker is a Chrome/Firefox extension designed to help users avoid distractions by blocking access to Instagram. When you try to visit Instagram, the extension clears the page and displays a motivational message reminding you to stay focused.
+InstaBlocker is a Chrome/Firefox extension designed to help users avoid distractions by blocking access to Instagram. When you try to visit Instagram, the extension displays a full-page overlay with a challenge that users must solve to gain access.
 
 ## Features
 
-- 🚫 Blocks Instagram website access
-- 💪 Displays motivational message: "PAY FOR YOUR SINS"
-- 🎨 Simple and effective distraction blocker
+- 🚫 Blocks Instagram website access completely
+- 🎯 Interactive challenge to unlock access
+- 🔐 Answer the riddle "olleh" to unblock
+- 🎨 Clean, centered UI with white input field
+- ✅ Error handling with alerts for wrong answers
 
 ## Installation
 
@@ -30,9 +32,13 @@ InstaBlocker is a Chrome/Firefox extension designed to help users avoid distract
 ## How It Works
 
 When you visit Instagram, the `contents.js` script:
-1. Clears the entire page content
-2. Creates a heading with the message "PAY FOR YOUR SINS"
-3. Styles it in red, centered, and large font
+1. Creates a full-page black overlay with fixed positioning
+2. Displays "Access Blocked" heading
+3. Shows a textarea input field with white background and black text
+4. Provides a button to submit the answer
+5. User must enter "olleh" (hello backwards) to remove the overlay
+6. Shows an alert if the wrong answer is entered
+7. Removes the overlay and allows access when correct answer is submitted
 
 ## Requirements
 
@@ -41,10 +47,12 @@ When you visit Instagram, the `contents.js` script:
 
 ## Future Enhancements
 
-- Customizable messages
+- Randomized challenge questions
+- Multiple difficulty levels
+- Time limit for solving the challenge
+- Customizable unlock answers
+- Statistics tracking
 - Whitelist/blacklist functionality
-- Timer-based blocking
-- Multiple language support
 
 ## License
 

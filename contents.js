@@ -1,17 +1,38 @@
-//1.clearinng the page
-document.body.innerHTML="";
 
-//2.setting the background to black
-document.styleSheets.backgroundColor = "black";
+//1.creating an overley
+const Overlay = document.createElement("div");
 
-//3.create a headding to disply
-const h1 = document.createElement("h1");
+//2.add style to the overlay
+Overlay.style.position = "fixed";
+Overlay.style.top = "0";
+Overlay.style.left = "0";
+Overlay.style.width = "100%";
+Overlay.style.height = "100%";
+Overlay.style.backgroundColor = "black";
+Overlay.style.zIndex = "9999"; // Sit on top of everything
+Overlay.style.display = "flex"; // Center the text
+Overlay.style.alignItems = "center";
+Overlay.style.justifyContent = "center";
+Overlay.style.flexDirection = "column";
+Overlay.style.color = "white"; // So we can see the text
 
-h1.innerText = "PAY FOR YOUR SINS";
-h1.style.color = "red";
-h1.style.textAlign = "center";
-h1.style.marginTop = "20%";
-h1.style.fontSize = "50px";
 
-//4.add the heading to the body
-document.body.appendChild(h1);
+
+//3.add input field and button inside the Overlay
+Overlay.innerHTML = `<h1>Access Blocked</h1> 
+<textarea id="answer" name="code" rows="4" cols="50" style="background-color: white; color: black; padding: 10px; font-size: 16px; font-family: Arial;">Write the code here</textarea>
+<button id="btn" style="padding: 10px 20px; margin-top: 10px; font-size: 16px; cursor: pointer; background-color: #4CAF50; color: white; border: none; border-radius: 4px;">Click me</button>`
+
+
+//4.appedn the overley to the body
+document.body.appendChild(Overlay);
+
+//5.getting the value from the textarea when button is clicked
+document.getElementById("btn").addEventListener("click", function () {
+    if (document.getElementById("answer").value === "olleh") {
+        Overlay.remove();
+    }
+    else {
+        alert("Wrong answer!");
+    }
+});
