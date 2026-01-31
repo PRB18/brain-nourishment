@@ -1,6 +1,4 @@
 
-
-```markdown
 # 🚫 InstaBlocker
 
 > **Stay focused. Block distractions. Master your time.**
@@ -36,7 +34,6 @@ InstaBlocker is a smart Chrome extension built for developers serious about beat
    git clone <repository-url>
    # or download and extract the zip file
 
-```
 
 2. **Open Chrome Extensions**
 * Navigate to `chrome://extensions/`
@@ -107,12 +104,11 @@ MIT License - Feel free to use, modify, and distribute
 
 ## 👤 Author
 
-**Rishi (The Twin)**
+**Rishi**
 
 ---
 
 *Made with ❤️ for productivity enthusiasts everywhere*
 
-```
 
-```
+
