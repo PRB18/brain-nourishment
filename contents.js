@@ -10,7 +10,59 @@
     }
 
     function createOverlay() {
+
+        //creating css 
+        const css = `
+    .toll-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #1a1a1a; /* Dark Grey > Pure Black */
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Courier New', monospace; /* Hacker Vibes */
+        color: #00ff00; /* Matrix Green */
+    }
+
+    .toll-input {
+        padding: 15px;
+        font-size: 18px;
+        margin: 20px 0;
+        border: 2px solid #00ff00;
+        background-color: black;
+        color: white;
+        width: 300px;
+        outline: none;
+    }
+
+    .toll-btn {
+        padding: 10px 30px;
+        font-size: 20px;
+        cursor: pointer;
+        background-color: #00ff00;
+        color: black;
+        border: none;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .toll-btn:hover {
+        background-color: white; /* Interaction feedback */
+    }
+`;
+
+        const style = document.createElement("style");
+        style.textContent = css;
+        document.head.appendChild(style);
+
+
         const Overlay = document.createElement("div");
+        Overlay.className = "toll-overlay";
 
         //question to pick randomly and ask the user
         const questions = [
@@ -28,25 +80,14 @@
 
         //pick random question from the lsit
         const randomIndex = Math.floor(Math.random() * questions.length);
+        console.log("🎲 Rolled Index:", randomIndex);//check randomness
         const randomQuestion = questions[randomIndex];
 
-        Overlay.style.position = "fixed";
-        Overlay.style.top = "0";
-        Overlay.style.left = "0";
-        Overlay.style.width = "100%";
-        Overlay.style.height = "100%";
-        Overlay.style.backgroundColor = "black";
-        Overlay.style.zIndex = "9999"; // Sit on top of everything
-        Overlay.style.display = "flex"; // Center the text
-        Overlay.style.alignItems = "center";
-        Overlay.style.justifyContent = "center";
-        Overlay.style.flexDirection = "column";
-        Overlay.style.color = "white"; // So we can see the text
 
         Overlay.innerHTML = `<h1>Access Blocked</h1>
         <h2>${randomQuestion.q}</h2>
-        <textarea id="answer" name="code" rows="4" cols="50" placeholder="Write your answer here" style="background-color: white; color: black; padding: 10px; font-size: 16px; font-family: Arial;"></textarea>
-        <button id="btn" style="padding: 10px 20px; margin-top: 10px; font-size: 16px; cursor: pointer; background-color: #4CAF50; color: white; border: none; border-radius: 4px;">Click me</button>`;
+        <textarea id="answer" name="code" rows="4" cols="50" placeholder="Write your answer here" class="toll-input"></textarea>
+        <button id="btn" class="toll-btn">Click me</button>`;
 
         document.body.appendChild(Overlay);
 

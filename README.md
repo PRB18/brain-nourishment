@@ -1,14 +1,17 @@
+
+
+```markdown
 # 🚫 InstaBlocker
 
 > **Stay focused. Block distractions. Master your time.**
 
-A powerful browser extension that blocks Instagram and challenges you to prove you deserve access.
+A powerful browser extension that blocks Instagram and forces you to solve a technical coding question to gain temporary access.
 
 ---
 
 ## ✨ Overview
 
-InstaBlocker is a smart Chrome/Firefox extension built for anyone serious about beating social media addiction. It doesn't just block Instagram—it makes you solve an interactive challenge first. Think of it as a digital bouncer for your productivity.
+InstaBlocker is a smart Chrome extension built for developers serious about beating social media addiction. It doesn't just block Instagram—it acts as a "Technical Interview" bouncer. You want to scroll? Prove you know your stuff first.
 
 ---
 
@@ -16,11 +19,11 @@ InstaBlocker is a smart Chrome/Firefox extension built for anyone serious about 
 
 | Feature | Description |
 |---------|-------------|
-| 🚫 **Complete Block** | Fully blocks Instagram with a full-page overlay |
-| 🧩 **Challenge System** | Interactive riddle prevents mindless access |
-| 🔓 **Smart Unlock** | Answer "olleh" to temporarily unlock access |
-| 🎨 **Clean UI** | Minimalist, distraction-free interface |
-| ⚡ **Instant Response** | Real-time feedback on wrong answers |
+| 🚫 **The Wall** | Fully blocks Instagram with a high-priority overlay |
+| 🎲 **Randomizer** | Fetches a random CS/Coding question from an internal bank |
+| ⏳ **Memory System** | Correct answers grant **10 minutes** of access (persists via LocalStorage) |
+| 🎨 **Hacker UI** | Matrix-style, CSS-injected terminal interface |
+| 🛡️ **Anti-Cheating** | Input sanitization handles case sensitivity |
 
 ---
 
@@ -32,31 +35,34 @@ InstaBlocker is a smart Chrome/Firefox extension built for anyone serious about 
    ```bash
    git clone <repository-url>
    # or download and extract the zip file
-   ```
 
-2. **Open your browser's extension manager**
-   - **Chrome**: Navigate to `chrome://extensions/`
-   - **Firefox**: Navigate to `about:addons`
+```
+
+2. **Open Chrome Extensions**
+* Navigate to `chrome://extensions/`
+
 
 3. **Enable Developer Mode**
-   - Chrome: Toggle "Developer mode" (top-right corner)
-   - Firefox: No action needed
+* Toggle "Developer mode" (top-right corner)
+
 
 4. **Load the extension**
-   - Click "Load unpacked" (Chrome) or "Load Temporary Add-on" (Firefox)
-   - Select the `instablocker.ex` folder
+* Click "Load unpacked"
+* Select the project folder
 
-5. **You're ready!** 🎉 The extension is now active
+
+5. **You're ready!** 🎉 Open Instagram to test the Toll Booth.
 
 ---
 
 ## 📁 Project Structure
 
-```
-instablocker.ex/
-├── manifest.json      # Extension metadata & permissions
-├── contents.js        # Core blocking & challenge logic
-└── README.md          # Documentation
+```text
+instablocker/
+├── manifest.json      # The ID Card (Permissions & Config)
+├── content.js         # The Brain (Blocking, Quiz Logic, & CSS Injection)
+└── README.md          # You are here
+
 ```
 
 ---
@@ -65,38 +71,31 @@ instablocker.ex/
 
 When you visit Instagram, InstaBlocker springs into action:
 
-```
-1. 🛡️  Full-page black overlay appears
-2. 🖼️  "Access Blocked" message displays
-3. 📝  Interactive input field appears
-4. 🤔  You must solve the riddle: "olleh"
-5. ✓   Enter correct answer → Access granted
-6. ✗   Wrong answer → Alert notification
-```
+1. **🕒 CHECK:** Is there a valid 10-minute timestamp in LocalStorage?
+* **YES:** Allow access.
+* **NO:** Deploy The Wall.
 
-**The Riddle:** "olleh" is "hello" spelled backwards—a simple test of focus and intent.
 
----
+2. **🔒 BLOCK:** A full-page overlay covers the content.
+3. **❓ QUIZ:** The script picks a random question (e.g., "What is FIFO?").
+4. **⌨️ INPUT:** User types the answer.
+5. **✅ SUCCESS:**
+* Overlay is removed.
+* Timestamp is saved for 10 minutes.
+* User is free to scroll.
 
-## 💻 System Requirements
 
-| Requirement | Details |
-|------------|---------|
-| **Chrome** | Version 88 or later |
-| **Firefox** | Version 68 or later |
-| **Permissions** | Extension installation rights |
 
 ---
 
 ## 🚀 Future Roadmap
 
-- [ ] Randomized challenge questions
-- [ ] Multiple difficulty levels
-- [ ] Time-based challenges
-- [ ] Custom unlock phrases
-- [ ] Usage statistics dashboard
-- [ ] Website whitelist/blacklist
-- [ ] Customizable block messages
+* [x] Randomized challenge questions (COMPLETED)
+* [x] Time-based unlock (10 mins) (COMPLETED)
+* [ ] Add support for YouTube & Twitter
+* [ ] Custom unlock phrases
+* [ ] Usage statistics dashboard
+* [ ] Website whitelist/blacklist
 
 ---
 
@@ -108,17 +107,12 @@ MIT License - Feel free to use, modify, and distribute
 
 ## 👤 Author
 
-**Brain Nourishment**
-
----
-
-## 💡 Tips for Best Results
-
-- **Set a goal**: Use InstaBlocker during focus sessions
-- **Stay consistent**: Solve the challenge mindfully each time
-- **Track progress**: Notice how your productivity improves
-- **Customize**: Modify the challenge to fit your needs
+**Rishi (The Twin)**
 
 ---
 
 *Made with ❤️ for productivity enthusiasts everywhere*
+
+```
+
+```
