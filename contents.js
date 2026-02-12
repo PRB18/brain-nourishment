@@ -59,7 +59,7 @@
         background-color: white; /* Interaction feedback */
     }
 `;
-
+        //creating a style element through dom
         const style = document.createElement("style");
         style.textContent = css;
         document.head.appendChild(style);
